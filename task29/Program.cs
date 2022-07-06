@@ -3,7 +3,11 @@
 //1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 
 //6, 1, 33 -> [6, 1, 33]
-int []array = new int[8];
+Console.WriteLine("введите длину массива");
+int digit = Convert.ToInt32(Console.ReadLine());
+int []array = new int[digit];
+
+
 void FillArray(int [] coll)
 {
     int length = coll.Length;
