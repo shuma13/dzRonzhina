@@ -21,23 +21,23 @@ double[,] GenerateArray(int rowNumber, int colNumber)
     }
     return result;
 }
-void printGreen(int number)
+void PrintGreen(int number)
 {
     Console.ForegroundColor = ConsoleColor.Green;
     Console.Write($"{number}\t");
     Console.ResetColor();
 }
-void print2DArray(double[,] arrayToPrint)
+void Print2DArray(double[,] arrayToPrint)
 {
     Console.Write(" \t");
     for (var i = 0; i < arrayToPrint.GetLength(1); i++)
     {
-        printGreen(i);
+        PrintGreen(i);
     }
     Console.WriteLine();
     for (int i = 0; i < arrayToPrint.GetLength(0); i++)
     {
-        printGreen(i);
+        PrintGreen(i);
         for (int j = 0; j < arrayToPrint.GetLength(1); j++)
         {
             Console.Write(arrayToPrint[i, j]);
@@ -49,11 +49,11 @@ void print2DArray(double[,] arrayToPrint)
         Console.WriteLine();
     }
 }
-Console.WriteLine("Введите размерность массива - количество сторок :");
+Console.Write("Введите размерность массива - количество сторок :");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите размерность массива - количество столбцов :");
+Console.Write("Введите размерность массива - количество столбцов :");
 int n = Convert.ToInt32(Console.ReadLine());
 double[,] array = GenerateArray(m, n);
-print2DArray(array);
+Print2DArray(array);
 
 
